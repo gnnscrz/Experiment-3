@@ -1,37 +1,28 @@
-#include <iostream>
-#include <conio.h>
-#include <string> 
+#include<iostream>
+#include<conio.h>
+#include<string>
 
 using namespace std;
 
 int main()
 {
-
- char str[50], temp;
-
-    int i, j, cnt=0;
-
-    cout << "Enter an array : ";
-    gets(str);
-
-    j = strlen(str) - 1;
-
-    for (i = 0; i < j; i++,j--)
-    {
-        temp = str[i];
-        str[i] = str[j];
-        str[j] = temp;	
-	}
-	cout << "\nReversed array: " << str << endl << endl; 
-
-
-	for (int i = 0; str [i]; i++)
+	char n[50];	
+	int size;
+	
+	cout << "Enter a charcter array: "; 
+	cin>> n;
+	size = 0;
+	
+	while(n[size] !='\0') size++;
+	
+	cout << "\ Reverse array: ";
+	for(int j=size-1;j>=0;j--)
 	{
-		cnt++; 
+		cout << n[j];
 	}
 
-	cout << "Size of Array: " << cnt << endl; 
-
-_getch();
-return 0; 
+	cout<< "\n\ Size of  array: "<< size;
+	
+	_getch();
+	return 0;
 }
